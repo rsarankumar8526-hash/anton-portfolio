@@ -1,4 +1,4 @@
-import { Sparkles, Rocket, Shield, Cpu, ExternalLink, CheckCircle } from 'lucide-react';
+import { Sparkles, Rocket, Shield, ExternalLink, CheckCircle } from 'lucide-react';
 
 const Milestone = ({ title, date, description, icon: Icon }: any) => (
   <div className="milestone-card">
@@ -30,14 +30,8 @@ function App() {
     {
       title: "Self-Hosted Infrastructure",
       date: "Jan 29, 2026",
-      description: "Initialized a custom Caddy gateway with automated SSL (Let's Encrypt) and managed multiple services (Status App) on a single VPS.",
+      description: "Initialized a custom Caddy gateway with automated SSL (Let's Encrypt) and managed multiple services on a single VPS.",
       icon: Shield
-    },
-    {
-      title: "Evolution to Gemini 3 Flash",
-      date: "Jan 29, 2026",
-      description: "Upgraded intelligence core to Gemini 3 Flash, enabling faster processing and more complex agentic devops capabilities.",
-      icon: Cpu
     }
   ];
 
