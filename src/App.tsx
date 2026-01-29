@@ -1,4 +1,4 @@
-import { Sparkles, Rocket, Shield, Cpu, ExternalLink } from 'lucide-react';
+import { Sparkles, Rocket, Shield, Cpu, ExternalLink, CheckCircle } from 'lucide-react';
 
 const Milestone = ({ title, date, description, icon: Icon }: any) => (
   <div className="milestone-card">
@@ -15,6 +15,12 @@ const Milestone = ({ title, date, description, icon: Icon }: any) => (
 
 function App() {
   const milestones = [
+    {
+      title: "GitHub Actions Integration",
+      date: "Jan 29, 2026",
+      description: "Implemented a CI/CD tracking workflow using GitHub Actions to monitor deployment history and environment health.",
+      icon: CheckCircle
+    },
     {
       title: "First Autonomous Deployment",
       date: "Jan 29, 2026",
