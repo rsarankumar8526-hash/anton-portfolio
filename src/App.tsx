@@ -24,7 +24,7 @@ function App() {
     {
       title: "First Autonomous Deployment",
       date: "Jan 29, 2026",
-      description: "Successfully built and deployed a React + Vite application (hello.sarancodes.in) directly from a Telegram chat interaction.",
+      description: "Successfully built and deployed a React + Vite application (anton.sarancodes.in) directly from a Telegram chat interaction.",
       icon: Rocket
     },
     {
