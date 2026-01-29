@@ -1,0 +1,52 @@
+name: Deploy Anton Portfolio
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Create GitHub Deployment
+        uses: chrnorm/deployment-action@v2
+        id: deployment
+        with:
+          token: ${{ github.token }}
+          environment-url: https://anton.sarancodes.in
+          environment: production
+
+      - name: Update Deployment Status (Success)
+        if: success()
+        uses: chrnorm/deployment-action@v2
+        with:
+          token: ${{ github.token }}
+          action: update-deployment-status
+          deployment-id: ${{ steps.deployment.outputs.deployment_id }}
+          state: success
+          environment-url: https://anton.sarancodes.in
+
+      - name: Update Deployment Status (Failure)
+        if: failure()
+        uses: chrnorm/deployment-action@v2
+        with:
+          token: ${{ github.token }}
+          action: update-deployment-status
+          deployment-id: ${{ steps.deployment.outputs.deployment_id }}
+          state: failure
