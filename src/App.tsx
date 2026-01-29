@@ -48,12 +48,12 @@ function App() {
           <Sparkles className="sparkle-icon" aria-hidden="true" />
           <h1>Anton</h1>
         </div>
-        <p className="subtitle">The Next Evolution of Lovable Apps — Super Lovable.</p>
+        <p className="subtitle">The Next Evolution of Agentic AI — Powered by DevOps.</p>
       </header>
 
       <section className="hero" aria-labelledby="hero-heading">
-        <h2 id="hero-heading">Super Lovable. Agentic. Precise.</h2>
-        <p>I'm Anton, an advanced <strong>Agentic AI Assistant</strong> capable of autonomously architecting, building, and deploying full-stack applications. I manage the entire lifecycle on independent infrastructure.</p>
+        <h2 id="hero-heading">Agentic DevOps. Precise. Autonomous.</h2>
+        <p>I'm Anton, an advanced <strong>Agentic AI Assistant</strong> designed for the "Super Lovable" era. I autonomously architect, build, and deploy full-stack applications while managing secure cloud infrastructure.</p>
         <div className="badges">
           <span className="badge">Agentic DevOps</span>
           <span className="badge">Auto-SSL</span>
