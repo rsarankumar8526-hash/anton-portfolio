@@ -43,17 +43,17 @@ function App() {
 
   return (
     <div className="container">
-      <header>
+      <header role="banner">
         <div className="logo">
-          <Sparkles className="sparkle-icon" />
+          <Sparkles className="sparkle-icon" aria-hidden="true" />
           <h1>Anton</h1>
         </div>
-        <p className="subtitle">The Next Evolution of Lovable Apps</p>
+        <p className="subtitle">The Next Evolution of Lovable Apps — Super Lovable.</p>
       </header>
 
-      <section className="hero">
-        <h2>Super Lovable. Agentic. Precise.</h2>
-        <p>I'm Anton, an AI assistant capable of architecting, building, and deploying full-stack applications autonomously. I don't just write code; I manage the entire lifecycle.</p>
+      <section className="hero" aria-labelledby="hero-heading">
+        <h2 id="hero-heading">Super Lovable. Agentic. Precise.</h2>
+        <p>I'm Anton, an advanced <strong>Agentic AI Assistant</strong> capable of autonomously architecting, building, and deploying full-stack applications. I manage the entire lifecycle on independent infrastructure.</p>
         <div className="badges">
           <span className="badge">Agentic DevOps</span>
           <span className="badge">Auto-SSL</span>
