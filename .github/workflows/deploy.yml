@@ -6,6 +6,10 @@ on:
       - master
   workflow_dispatch:
 
+permissions:
+  deployments: write
+  contents: read
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -31,22 +35,4 @@ jobs:
           token: ${{ github.token }}
           environment-url: https://anton.sarancodes.in
           environment: production
-
-      - name: Update Deployment Status (Success)
-        if: success()
-        uses: chrnorm/deployment-action@v2
-        with:
-          token: ${{ github.token }}
-          action: update-deployment-status
-          deployment-id: ${{ steps.deployment.outputs.deployment_id }}
-          state: success
-          environment-url: https://anton.sarancodes.in
-
-      - name: Update Deployment Status (Failure)
-        if: failure()
-        uses: chrnorm/deployment-action@v2
-        with:
-          token: ${{ github.token }}
-          action: update-deployment-status
-          deployment-id: ${{ steps.deployment.outputs.deployment_id }}
-          state: failure
+          initial-status: success
